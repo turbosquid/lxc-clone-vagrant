@@ -1,7 +1,7 @@
 lxc-clone-vagrant
 =================
 
-lxc-clone shell script fixed for vagrant-lxc provider (
+lxc-clone shell script fixed for vagrant-lxc provider. 
 
 This is a fork of the lxc-clone shell script that ships with lxc-0.90. It includes a fix to a number of 
 grep regular expressions that conflict with comments that vagrant-lxc drops into the lxc-container config files 
