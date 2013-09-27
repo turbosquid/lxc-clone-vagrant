@@ -8,6 +8,6 @@ grep regular expressions that conflict with comments that vagrant-lxc drops into
 it creates.
 
 The latest lxc-clone that ships with lxc (see https://github.com/lxc/lxc) appears to be a rewrite in C, which presumably 
-will work as expected; the shell script has been abandoned. This should work for vagrant users until
+will work as expected; the shell script has been abandoned. In the meantime, this script should work for vagrant users until
 the next major lxc-upgrade, at which point you could switch to the version that comes with the distribution. Alternatively,
-you could simply upgrade.
+you could simply upgrade now.
