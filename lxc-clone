@@ -180,7 +180,10 @@ mkdir -p $lxc_path/$lxc_new
 hostname=$lxc_new
 
 echo "Tweaking configuration"
-cp $lxc_path/$lxc_orig/config $lxc_path/$lxc_new/config
+# This might be a little risky, as it assumes that the new cntainer will always want to 
+# change the old container path to the new container path. But this is generally the
+# correct behavior for all of my use cases
+cat $lxc_path/$lxc_orig/config | sed "s:$lxc_path/$lxc_orig:$lxc_path/$lxc_new:g" > $lxc_path/$lxc_new/config
 sed -i '/lxc.utsname/d' $lxc_path/$lxc_new/config
 echo "lxc.utsname = $hostname" >> $lxc_path/$lxc_new/config
 
